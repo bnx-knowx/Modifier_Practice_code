@@ -9,7 +9,7 @@ contract HelloWorld {
         owner = passw;        
     }
     modifier _check{
-        require (owner == 0x6381EFe6437054d6250E9BC415C6ad9DFe3f17e7,"You are Authorised to perform the operation");
+        require (owner == 0x0000000000000000000000000000000000000000,"You are Authorised to perform the operation");
         _;
     }
 
