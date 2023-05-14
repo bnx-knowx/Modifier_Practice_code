@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-// compiler version must be greater than or equal to 0.8.17 and less than 0.9.0
 pragma solidity ^0.8.17;
    
 contract HelloWorld {
@@ -10,11 +9,14 @@ contract HelloWorld {
         owner = passw;        
     }
     modifier _check{
-        require (owner == msg.sender,"You are not Authorised to permord the operation");
+        require (owner == 0x6381EFe6437054d6250E9BC415C6ad9DFe3f17e7,"You are Authorised to perform the operation");
         _;
     }
 
     function set()public _check(){
         greet = "You Made it";
+    }
+    function backtodefault()public _check(){
+        greet = "Hello World!";
     }
 }
